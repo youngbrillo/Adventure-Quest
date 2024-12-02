@@ -30,7 +30,9 @@ void engine::Text::Draw(Vector2 offset, float angleOffset, Color* color) const
 
 Vector2 engine::Text::Size() const
 {
-    return MeasureTextEx(font, text.c_str(), fontSize, fontSpacing);
+    Vector2 measurement =  MeasureTextEx(font, text.c_str(), fontSize, fontSpacing);
+
+    return measurement;
 }
 
 Rectangle engine::Text::bounds() const
