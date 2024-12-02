@@ -66,7 +66,7 @@ workspace (workspaceName)
 check_raylib();
 
 include ("raylib_premake5.lua")
-
+include "imgui"
 if(os.isdir("game")) then
     include ("game")
 end

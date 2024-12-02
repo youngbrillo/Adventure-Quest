@@ -25,7 +25,13 @@ project (workspaceName)
     }
     files {"**.c", "**.cpp", "**.h"}
 
-    includedirs { "./", "src"}
+    includedirs { "./", "src", "../imgui"}
+
+    
+    externalincludedirs {"../Vendor/include"}
+    libdirs { "../Vendor/lib"}
 	link_raylib();
 	
 	-- To link to a lib use link_to("LIB_FOLDER_NAME")
+
+  links("imgui")
